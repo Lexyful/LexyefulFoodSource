@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'; // Import Link
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Home } from '../Home/Home';
 import { FoodItem } from '../FoodItem/FoodItem';
 import './App.css';
@@ -10,9 +10,10 @@ export const App = () => {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    fetchFoodData()
+    fetchFoodData('apple')
       .then(data => {
-        setFood(data.food);
+        console.log(data);
+        setFood(data.hints || []); // Ensure that data.hints is not undefined
       })
       .catch(err => {
         setError(`Sorry there was a ${err.message} error please try again`);
