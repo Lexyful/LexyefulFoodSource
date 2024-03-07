@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useParams } from 'react-router-dom';
 import './App.css';
+import Home from '../Home/Home'
 import FoodItem from '../FoodItem/FoodItem';
 
 function App() {
@@ -37,7 +38,7 @@ function App() {
       <Router>
         <Routes>
           <Route exact path="/">
-            {/* Your Home Component Here */}
+            {<Home />}
           </Route>
           <Route path="/food/:id" element={<FoodItem />} />
           <Route path="*" element={<div>404 Not Found</div>} />
