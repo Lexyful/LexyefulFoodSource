@@ -1,24 +1,33 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useParams } from 'react-router-dom';
 import './App.css';
-import FoodItem from '../FoodItem/FoodItem'; 
+import Home from '../Home/Home'
+import FoodItem from '../FoodItem/FoodItem';
 
 function App() {
+
+  
   const [food, setFood] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('https://api.edamam.com/api/food-database/v2/parser?app_id=c7433c34&app_key=a05fb60503e8524c058ebab2e9c5a273&ingr=[FOOD ITEM HERE]&nutrition-type=cooking')
-      .then(response => {
+    const fetchFoodItems = async () => {
+      try {
+        const response = await fetch(`https://api.edamam.com/api/food-database/v2/parser?app_id=${process.env.REACT_APP_API_ID}&app_key=${process.env.REACT_APP_API_KEY}&ingr=[FOOD ITEM HERE]&nutrition-type=cooking`);
         if (response.ok) {
-          return response.json();
-        } 
-      })
-      .then(data => {
-        setFood(data.items);
-      })
-      .catch(error => {
+          const data = await response.json();
+          setFood(data?.hints || []);
+          setLoading(false);
+        } else {
+          throw new Error('Failed to fetch food items');
+        }
+      } catch (error) {
         console.log(error);
-      });
+        setLoading(false);
+      }
+    };
+
+    fetchFoodItems();
   }, []);
 
   return (
@@ -29,19 +38,23 @@ function App() {
       <Router>
         <Routes>
           <Route exact path="/">
-            {/* Your Home Component Here */}
+            {<Home />}
           </Route>
-          <Route path="/food/:id" element={<FoodItem food={food} />} />
+          <Route path="/food/:id" element={<FoodItem />} />
           <Route path="*" element={<div>404 Not Found</div>} />
         </Routes>
       </Router>
       <div className="food-list">
-        {food.map(item => (
-          <div key={item.foodId} className="food-item">
-            <img src={item.image} alt={item.label} />
-            <h3>{item.label}</h3>
-          </div>
-        ))}
+        {loading ? (
+          <div>Loading...</div>
+        ) : (
+          food.map(item => (
+            <div key={item.food.foodId} className="food-item">
+              <img src={item.food.image} alt={item.food.label} />
+              <h3>{item.food.label}</h3>
+            </div>
+          ))
+        )}
       </div>
     </div>
   );
