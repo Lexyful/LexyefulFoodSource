@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import './FoodItem.css';
 
-const FoodItem = () => {
+export const FoodItem = () => {
 
   
   const { id } = useParams();
@@ -35,4 +35,3 @@ const FoodItem = () => {
   );
 };
 
-export default FoodItem;
