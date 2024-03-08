@@ -1,16 +1,11 @@
-// SearchBar.js
-
 import React, { useState } from 'react';
+import { fetchFoodData } from '../../data/apicalls';
 import './SearchBar.css';
 
-export const SearchBar = ({ onSearch }) => {
+export const SearchBar = () => {
   const [value, setValue] = useState('');
   const onChange = (e) => {
     setValue(e.target.value);
-  };
-
-  const handleSearch = (searchTerm) => {
-    onSearch(searchTerm);
   };
 
   return (
@@ -23,7 +18,10 @@ export const SearchBar = ({ onSearch }) => {
           onChange={onChange}
           placeholder="Search food"
         />
-        <button className="search-button" onClick={() => handleSearch(value)}>Search</button>
+        <button className="search-button" onClick={() => fetchFoodData(value).then(data => {
+        console.log('hi',data);
+        // setFood(data.hints || []); // Ensure that data.hints is not undefined
+      })}>Search</button>
       </div>
     </div>
   );
