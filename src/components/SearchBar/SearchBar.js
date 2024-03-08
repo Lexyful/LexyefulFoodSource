@@ -1,3 +1,5 @@
+// SearchBar.js
+
 import React, { useState } from 'react';
 import './SearchBar.css';
 
@@ -26,4 +28,3 @@ export const SearchBar = ({ onSearch }) => {
     </div>
   );
 };
-

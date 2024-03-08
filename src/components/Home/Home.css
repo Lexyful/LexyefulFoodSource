@@ -1,0 +1,92 @@
+/* Home.css */
+
+.home-container {
+    display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: fit-content;
+  min-height: inherit;
+  margin-top: 130px;
+  padding-top: 30px;
+  }
+  
+  .searched-food-grid {
+    margin-top: 5vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
+    grid-gap: 2vw;
+  }
+  
+  .food-card {
+    border: 1px solid #ccc;
+    padding: 2vw;
+    background-color: #fff;
+    margin-bottom: 2vh;
+  }
+  
+  .food-label {
+    font-family: 'Leckerli One', sans-serif;
+    font-size: 2vh;
+    color: #023047;
+  }
+  
+  .food-image {
+    width: 18vw;
+    max-height: inherit;
+    margin-bottom: 2vh;
+  }
+  
+  #myInput {
+    box-sizing: border-box;
+    background-position: 2vh 1vh;
+    background-repeat: no-repeat;
+    font-size: 2vh;
+    padding: 2vh 2vw 1vh 6vw;
+    border: none;
+    border-bottom: 0.5vh solid #ddd;
+  }
+  
+  #myInput:focus {
+    outline: 0.5vh solid #ddd;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #023047;
+  }
+
+  .search-container {
+    margin-bottom: 20px;
+  }
+  
+  .search-button {
+    font-family: 'Leckerli One', sans-serif;
+    font-size: 1.5vh;
+    background-color: #219ebc;
+    transition-duration: 0.4s;
+    height: 4vh;
+    width: 9vh;
+    margin-left: 1vh;
+  }
+  
+  .search-button:hover {
+    background-color: #023047;
+    color: white;
+  }
+  
+  .cart-button {
+    font-family: 'Leckerli One', sans-serif;
+    font-size: 1.5vh;
+    background-color: #219ebc;
+    transition-duration: 0.4s;
+    height: 4vh;
+    width: 9vh;
+    margin-left: 1vh;
+  }
+  
+  .cart-button:hover {
+    background-color: #023047;
+    color: white;
+  }
+  
