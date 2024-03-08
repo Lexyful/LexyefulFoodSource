@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom"
+import { SearchBar } from "../components/SearchBar/SearchBar"
 
 export const Header = () => {
 
@@ -8,6 +9,7 @@ export const Header = () => {
                 <p>Home</p>
             </NavLink>
             <h1>Lexyeful Food Source</h1>
+            <SearchBar />
             <NavLink to="/cart">
                 <p>Cart</p>
             </NavLink>
