@@ -32,7 +32,7 @@ export const App = () => {
             path="/"
             element={<Home food={food} Link={Link} />} // Pass Link as a prop to Home
           />
-          <Route path="/food/:id" element={<FoodItem />} />
+          <Route path="/food/:id" element={<FoodItem food={food} />} /> {/* Pass food data as a prop */}
           <Route path="*" element={<div>404 Not Found</div>} />
         </Routes>
       </Router>
