@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import { fetchFoodData } from '../../data/apicalls';
 import './SearchBar.css';
 
@@ -18,10 +19,12 @@ export const SearchBar = () => {
           onChange={onChange}
           placeholder="Search food"
         />
-        <button className="search-button" onClick={() => fetchFoodData(value).then(data => {
-        console.log('hi',data);
-        // setFood(data.hints || []); // Ensure that data.hints is not undefined
-      })}>Search</button>
+        <NavLink to="/results">
+          <button className="search-button" onClick={() => fetchFoodData(value).then(data => {
+          console.log('hi',data);
+          // setFood(data.hints || []); // Ensure that data.hints is not undefined
+        })}>Search</button>
+        </NavLink>
       </div>
     </div>
   );
