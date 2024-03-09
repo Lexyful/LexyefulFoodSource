@@ -1,19 +1,14 @@
-import { FoodItem } from "../FoodItems/FoodItems";
+import React from 'react';
+import './Results.css';
 
 export const Results = ({ searchedResults }) => {
-    const storedData = localStorage.getItem('apiData');
-    if (storedData) {
-      // If data exists in local storage, parse it from JSON format
-      JSON.parse(storedData);
-    }
-  
-    const foodItem = (food) => {
-        if (food){
-      return (
-        <div className="food-item-container">
+  return (
+    <div>
+      {searchedResults.length > 0 ? (
+        <div className="results-container">
           <div className="food-grid">
             <div className="food-items">
-              {food.hints.map((item, index) => (
+              {searchedResults.map((item, index) => (
                 <div key={index} className="food-item">
                   {item.food.image && (
                     <img
@@ -27,17 +22,9 @@ export const Results = ({ searchedResults }) => {
             </div>
           </div>
         </div>
-      );
-    } else {
-        return (
-          <div>Sorry, no results found!</div>
-        )
-    }
-    }
-  
-    return (
-    //  foodItem(storedData)
-    <div></div>
-    );
-  };
-
+      ) : (
+        <h3>Sorry, no results found!</h3>
+      )}
+    </div>
+  );
+};

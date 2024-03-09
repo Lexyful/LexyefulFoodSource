@@ -11,23 +11,3 @@ h1 {
   margin: 0;
 }
 
-.food-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.food-item {
-  width: 200px;
-  margin: 10px;
-}
-
-.food-item img {
-  width: 100%;
-  height: auto;
-}
-
-.food-item h3 {
-  margin: 10px 0 0;
-}
