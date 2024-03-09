@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom"
-import { SearchBar } from "../components/SearchBar/SearchBar"
+import { SearchBar } from "../SearchBar/SearchBar"
 import "./Header.css"
 
 export const Header = () => {
@@ -14,6 +14,7 @@ export const Header = () => {
             <NavLink to="/cart">
                 <button className="cart-click">Cart</button>
             </NavLink>
+      
         </div>
        
     )

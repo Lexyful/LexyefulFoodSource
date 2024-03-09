@@ -37,7 +37,7 @@ export const Results = ({ searchedResults }) => {
   
     return (
     //  foodItem(storedData)
-    <div>hi</div>
+    <div></div>
     );
   };
 

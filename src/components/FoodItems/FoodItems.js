@@ -1,14 +1,12 @@
 import React from 'react';
-import './FoodItems.css';
+import './FoodItems.css'
 
-export const FoodItem = ({ food }) => {
-
-  
+export const FoodItems = ({ food }) => {
   return (
     <div className="food-item-container">
-      <div className="food-grid">
+      {/* <div className="food-grid">
         <div className="food-items">
-          {food.map((item, index) => (
+          {food.hints.map((item, index) => (
             <div key={index} className="food-item">
               {item.food.image && (
                 <img
@@ -20,14 +18,7 @@ export const FoodItem = ({ food }) => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
-    // const foodItem = food[id]
-
-    // if (!food) {
-    //   return <div>Food not found</div>;
-    // }
-
-    // // const {hints, foodId }

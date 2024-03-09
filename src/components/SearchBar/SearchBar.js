@@ -21,8 +21,8 @@ export const SearchBar = () => {
         />
         <NavLink to="/results">
           <button className="search-button" onClick={() => fetchFoodData(value).then(data => {
-          // console.log('hi',data);
-          localStorage.setItem('apiData', JSON.stringify(data));
+          console.log('hi',data);
+          // localStorage.setItem('apiData', JSON.stringify(data));
           // console.log(JSON.parse(localStorage.apiData.hints));
           // setFood(data.hints || []); // Ensure that data.hints is not undefined
         })}>Search</button>
