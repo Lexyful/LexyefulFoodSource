@@ -1,18 +1,20 @@
 import { NavLink } from "react-router-dom"
 import { SearchBar } from "../components/SearchBar/SearchBar"
+import "./Header.css"
 
 export const Header = () => {
 
     return (
-        <header>
+        <div className="header-container">
             <NavLink to="/">
-                <p>Home</p>
+                <button className="home-click">Home</button>
             </NavLink>
             <h1>Lexyeful Food Source</h1>
             <SearchBar />
             <NavLink to="/cart">
-                <p>Cart</p>
+                <button className="cart-click">Cart</button>
             </NavLink>
-        </header>
+        </div>
+       
     )
 }
