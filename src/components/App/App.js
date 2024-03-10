@@ -38,7 +38,6 @@ export const App = () => {
     };
 
     const addToCart = (product) => {
-      console.log('SOMETHINGBIGANDVERBOSE', product)
       // const selectedItem = {
       //   id: product.id, 
       //   label: product.label,
@@ -79,13 +78,23 @@ export const App = () => {
     setSelected(updatedSelected);
   };
 
+  const incrementItem = (item) => {
+    const updatedSelected = selected.map(selectedItem => {
+      if (selectedItem.id === item.id) {
+        return { ...selectedItem, quantity: selectedItem.quantity + 1 };
+      }
+      return selectedItem;
+    });
+    setSelected(updatedSelected);
+  };
+
   return (
     <div className="App">
       <Header handleSearch={handleSearch} />
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/results" element={<Results searchedResults={searchedResults} addToCart={addToCart} />} />
-        <Route exact path="/cart" element={<Cart selected={selected} deleteSelected={deleteSelected} decrementItem={decrementItem} clearCart={clearCart}/>} />
+        <Route exact path="/cart" element={<Cart selected={selected} deleteSelected={deleteSelected} decrementItem={decrementItem} incrementItem={incrementItem} clearCart={clearCart}/>} />
         <Route path="*" element={<div>404 Not Found</div>} />
       </Routes>
     </div>

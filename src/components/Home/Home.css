@@ -1,6 +1,6 @@
 .home-container {
     display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   height: fit-content;
@@ -24,32 +24,4 @@
     margin: 0;
   }
   
-  /* .searched-food-grid {
-    margin-top: 5vh;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
-    grid-gap: 2vw;
-  }
   
-  .food-card {
-    border: 1px solid #ccc;
-    padding: 2vw;
-    background-color: #fff;
-    margin-bottom: 2vh;
-  }
-  
-  .food-label {
-    font-family: 'Leckerli One', sans-serif;
-    font-size: 2vh;
-    color: #023047;
-  }
-  
-  .food-image {
-    width: 18vw;
-    max-height: inherit;
-    margin-bottom: 2vh;
-  }
-   */
-
-
-
