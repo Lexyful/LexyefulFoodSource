@@ -69,13 +69,23 @@ export const App = () => {
     setSelected([])
   }
 
+  const decrementItem = (item) => {
+    const updatedSelected = selected.map(selectedItem => {
+      if (selectedItem.id === item.id && selectedItem.quantity > 0) {
+        return { ...selectedItem, quantity: selectedItem.quantity - 1 };
+      }
+      return selectedItem;
+    });
+    setSelected(updatedSelected);
+  };
+
   return (
     <div className="App">
       <Header handleSearch={handleSearch} />
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/results" element={<Results searchedResults={searchedResults} addToCart={addToCart} />} />
-        <Route exact path="/cart" element={<Cart selected={selected} deleteSelected={deleteSelected} clearCart={clearCart}/>} />
+        <Route exact path="/cart" element={<Cart selected={selected} deleteSelected={deleteSelected} decrementItem={decrementItem} clearCart={clearCart}/>} />
         <Route path="*" element={<div>404 Not Found</div>} />
       </Routes>
     </div>
