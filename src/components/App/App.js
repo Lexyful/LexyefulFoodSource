@@ -39,11 +39,11 @@ export const App = () => {
 
     const addToCart = (product) => {
       console.log('SOMETHINGBIGANDVERBOSE', product)
-      const updatedItem = {
-        id: product.id, 
-        label: product.label,
-        image: product.image,
-      }
+      // const selectedItem = {
+      //   id: product.id, 
+      //   label: product.label,
+      //   image: product.image,
+      // }
 
       const existingItemIndex = selected.findIndex(item => item.id === product.id);
       

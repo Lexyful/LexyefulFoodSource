@@ -24,7 +24,7 @@ export const Cart = ({ selected, deleteSelected, clearCart }) => {
       <div className="cart-items">
         {selected.map((item, index) => (
             <>        
-                <FoodItem key={index} item={item} handleItem={deleteSelected} buttonDistinction={'remove from cart'} />
+                <FoodItem key={item.id} item={item} handleItem={deleteSelected} buttonDistinction={'remove from cart'} />
                 <p>{item.quantity}</p>
             </>
         ))}
