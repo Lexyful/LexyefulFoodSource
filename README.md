@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+# 📰 Lexyeful Food Source
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
+  - [Introduction](#Introduction)
+  - [Features](#Features)
+  - [Technologies](#Technologies)
+  - [Contributors](#Contributors)
+  - [Illustrations](#Illustrations)
+  - [Set Up](#Set-Up)
 
-## Available Scripts
+## Introduction
 
-In the project directory, you can run:
+This project demonstrates my ability to complete a take-home tech project following the directions of the promt. The challenge was to build a mock digital grocery purchasing app using Front End web developement fundamentals.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+🏠Home page with information about the site
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+🔍 Search bar for the desired food and navigation bar
 
-### `npm test`
+📄 Page of the food that was searched with buttons to add to the cart to purchase
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+➕➖ Buttons to add and remove food to and from the cart
 
-### `npm run build`
+🛒 Checkout button
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+✅ Confirmation message
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technologies
+[![React](https://img.shields.io/badge/React-18.2.0-blue.svg)](https://reactjs.org/)
+[![React Router](https://img.shields.io/badge/React%20Router-5.3.0-green.svg)](https://reactrouter.com/)
+![CSS](https://img.shields.io/badge/CSS-3-blueviolet.svg)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contributors
 
-### `npm run eject`
+## Contributors
+### Front End
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<table>
+  <tr>
+    <td><img src="https://avatars.githubusercontent.com/Lexyful"></td>
+  </tr>
+  <tr>
+    <td>Lexye Jordan</td>
+    <td>
+      <a href="https://github.com/Lexyful">GitHub</a><br>
+      <a href="https://www.linkedin.com/in/lexye-jordan-175879260/">LinkedIn</a>
+    </td>
+  </tr>
+</table>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Illustrations
+<details>
+<summary> <h3>Wireframes</h3> </summary>
+<br>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![](/Users/alexysjordan/JobPrep/lexyefulfoodsource/assets/Screenshot 2024-03-10 at 4.31.30 PM.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![](/Users/alexysjordan/JobPrep/lexyefulfoodsource/assets/Screenshot 2024-03-10 at 4.32.03 PM.png)
 
-## Learn More
+![](/Users/alexysjordan/JobPrep/lexyefulfoodsource/assets/244512588-64cfc7a2-5c9b-42db-9897-6b2d94b84365.png) 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![](/Users/alexysjordan/JobPrep/lexyefulfoodsource/assets/244512578-2b1f025b-4591-4e7c-b5a7-2d7c150906f7.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![](/Users/alexysjordan/JobPrep/lexyefulfoodsource/assets/Screenshot 2024-03-09 at 8.10.25 AM.png)
+</details>
 
-### Code Splitting
+<details>
+<summary> <h3>Build</h3> </summary>
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![Alt text](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWxiaDc4ZTRjZDlteXN5ZWRoOXZ6bW8xajhyc2Y5bDVpbnZhZm5rcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/4TVVfneyFUvIEaC7n2/giphy.gif)
 
-### Analyzing the Bundle Size
+</details>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Deployed Page
+The live application can be used [HERE](https://vercel.com/lexyful/lexyefulfoodsource/3qRhcyPZaP36CV3nfQr1xwKt9PJn)!
 
-### Making a Progressive Web App
+## Wins
+- Achievement of Minimum Viable Product (MVP) and subsequent extensions
+- Utilization of unfamiliar API
+- Creating a functional cart for the user (adding and removing items one at a time in cart)
+- An empty cart after the purchase
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Future Improvements
+- The user should see a dummy image if the image is not available 
+- The user should see the quantity of items in their cart befor getting to the checkout screen.
+- The user should see a lable and details of the food items displayed
 
-### Advanced Configuration
+## Set Up
+1. Fork this repo
+2. Clone the repo to your local machine
+3. Run `npm i`, then ` npm run build`, then `npm start`
+4. View the project in the browser by opening localhost:3000
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Sources
+  - [Edamam Docs](https://www.edamam.com/)
+  - [MDN](http://developer.mozilla.org/en-US/)
+  - [W3Schools](https://www.w3schools.com/)
+  - [React Docs](https://reactjs.org/docs/getting-started.html)
+  - [React Router Docs](https://v5.reactrouter.com/)

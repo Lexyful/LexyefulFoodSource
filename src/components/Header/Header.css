@@ -6,12 +6,13 @@
     padding: 20px;
   }
   
-  h1 {
+  h1 a{
     font-family: 'Leckerli One', sans-serif;
     font-size: 8vh;
     font-weight: bold;
     color: #f7edf2;
     margin: 0;
+    text-decoration: none;
   }
   
   .cart-click,
