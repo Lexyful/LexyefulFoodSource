@@ -1,0 +1,31 @@
+.header-container {
+    background-color: #85d5ef;
+    display: flex;
+    justify-content: space-between; /* Align items with equal space between them */
+    align-items: center; /* Align items vertically */
+    padding: 20px;
+  }
+  
+  h1 {
+    font-family: 'Leckerli One', sans-serif;
+    font-size: 8vh;
+    font-weight: bold;
+    color: #f7edf2;
+    margin: 0;
+  }
+  
+  .cart-click,
+  .home-click {
+    font-family: 'Leckerli One', sans-serif;
+    font-size: 1.5vh;
+    background-color: #219ebc;
+    transition-duration: 0.4s;
+    height: 4vh;
+    width: 9vh;
+  }
+  
+  .cart-click:hover,
+  .home-click:hover {
+    background-color: #023047;
+    color: white;
+  }
