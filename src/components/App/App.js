@@ -9,7 +9,7 @@ import './App.css';
 
 export const App = () => {
   const [searchedResults, setSearchedResults] = useState([]);
-  const [selected, setSelected] = useState([]);
+  const [selectedItems, setSelectedItems] = useState([]);
 
   const handleSearch = (query) => {
     fetchFoodData(query)
@@ -22,7 +22,6 @@ export const App = () => {
               label: data.hints[i].food.label,
               image: data.hints[i].food.image,
             }
-            console.log('updated', updatedItem)
             newArray.push(updatedItem)
           }
           setSearchedResults(newArray)
@@ -37,56 +36,54 @@ export const App = () => {
     };
 
     const addToCart = (product) => {
-      const existingItemIndex = selected.findIndex(item => item.id === product.id);
-      if (existingItemIndex !== -1) {
-        const updatedResults = [...selected];
-        updatedResults[existingItemIndex].quantity++;
-        setSelected(updatedResults);
+      const cartItems = selectedItems.findIndex(item => item.id === product.id);
+      if (cartItems !== -1) {
+        const updatedResults = [...selectedItems];
+        updatedResults[cartItems].quantity++;
+        setSelectedItems(updatedResults);
       } else {
         const newItem = { ...product, quantity: 1 };
-        setSelected([...selected, newItem]);
+        setSelectedItems([...selectedItems, newItem]);
       }
     };
 
-  const deleteSelected = (item) => {
-    console.log('cart item', item)
-    console.log('before delete', selected)
-    const filterSelected = selected.filter(selected => selected !== item);
-    console.log('after delete', filterSelected)
-    setSelected(filterSelected);
+  const deleteSelectedItem = (item) => {
+    const filterSelectedItem = selectedItems.filter(selectedItems => selectedItems !== item);
+    setSelectedItems(filterSelectedItem);
   }
 
   const clearCart = () => {
-    setSelected([])
+    setSelectedItems([])
   }
 
   const addOneItem = (item) => {
-    const updatedSelected = selected.map(selectedItem => {
-      if (selectedItem.id === item.id) {
-        return { ...selectedItem, quantity: selectedItem.quantity + 1 };
+    const updatedSelected = selectedItems.map(selectedItems => {
+      if (selectedItems.id === item.id) {
+        return { ...selectedItems, quantity: selectedItems.quantity + 1 };
       }
-      return selectedItem;
+      return selectedItems;
     });
-    setSelected(updatedSelected);
+    setSelectedItems(updatedSelected);
   };
 
   const removeOneItem = (item) => {
-    const updatedSelected = selected.map(selectedItem => {
-      if (selectedItem.id === item.id && selectedItem.quantity > 0) {
-        return { ...selectedItem, quantity: selectedItem.quantity - 1 };
+    const updatedSelected = selectedItems.map(selectedItems => {
+      if (selectedItems.id === item.id && selectedItems.quantity > 0) {
+        return { ...selectedItems, quantity: selectedItems.quantity - 1 };
       }
-      return selectedItem;
+      
+      return selectedItems;
     });
-    setSelected(updatedSelected);
+    setSelectedItems(updatedSelected);
   };
 
   return (
     <div className="App">
-      <Header handleSearch={handleSearch} />
+      <Header handleSearch={handleSearch} selectedItems={selectedItems}/>
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/results" element={<Results searchedResults={searchedResults} addToCart={addToCart} />} />
-        <Route exact path="/cart" element={<Cart selected={selected} deleteSelected={deleteSelected} addOneItem={addOneItem}  removeOneItem={removeOneItem} clearCart={clearCart}/>} />
+        <Route exact path="/cart" element={<Cart selectedItems={selectedItems} deleteSelectedItem={deleteSelectedItem} addOneItem={addOneItem}  removeOneItem={removeOneItem} clearCart={clearCart}/>} />
         <Route path="*" element={<div>404 Not Found</div>} />
       </Routes>
     </div>

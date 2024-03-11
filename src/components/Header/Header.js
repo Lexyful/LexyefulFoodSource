@@ -2,7 +2,7 @@ import { NavLink, Link } from "react-router-dom";
 import { SearchBar } from "../SearchBar/SearchBar";
 import "./Header.css";
 
-export const Header = ({ handleSearch }) => { 
+export const Header = ({ handleSearch, selectedItems }) => { 
     return (
         <div className="header-container">
             <NavLink to="/">
@@ -13,7 +13,7 @@ export const Header = ({ handleSearch }) => {
                 </h1>
             <SearchBar handleSearch={handleSearch} /> 
             <NavLink to="/cart">
-                <button className="cart-click">Cart</button>
+                <button className="cart-click">Cart <span>{selectedItems.length || 0 }</span></button>
             </NavLink>
         </div>
     );
