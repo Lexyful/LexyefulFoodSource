@@ -82,8 +82,9 @@ The live application can be used [HERE](https://lexyefulfoodsource.vercel.app/)!
 
 ## Future Improvements
 - The user should see a dummy image if the image is not available 
-- The user should see the quantity of items in their cart befor getting to the checkout screen.
 - The user should see a lable and details of the food items displayed
+- Update css to be more inviting
+- Update responsiveness to fit all screen sizes
 
 ## Set Up
 1. Fork this repo

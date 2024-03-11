@@ -12,6 +12,7 @@ export const SearchBar = ({ handleSearch }) => {
   const handleButtonClick = () => {
     handleSearch(value.trim()); 
   };
+  
   return (
     <div className="search-container">
       <div className="search-inner">
