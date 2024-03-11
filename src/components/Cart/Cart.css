@@ -4,7 +4,6 @@
     grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
     grid-gap: 2vw;
   }
-
     
   .cart-item-image {
     width: auto;

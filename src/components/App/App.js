@@ -14,7 +14,6 @@ export const App = () => {
   const handleSearch = (query) => {
     fetchFoodData(query)
       .then(data => {
-       
         if (data.hints){
           let newArray = []
           for (let i = 0; i < data.hints.length; i++){
@@ -38,14 +37,7 @@ export const App = () => {
     };
 
     const addToCart = (product) => {
-      // const selectedItem = {
-      //   id: product.id, 
-      //   label: product.label,
-      //   image: product.image,
-      // }
-
       const existingItemIndex = selected.findIndex(item => item.id === product.id);
-      
       if (existingItemIndex !== -1) {
         const updatedResults = [...selected];
         updatedResults[existingItemIndex].quantity++;
@@ -56,7 +48,6 @@ export const App = () => {
       }
     };
 
-
   const deleteSelected = (item) => {
     console.log('cart item', item)
     console.log('before delete', selected)
@@ -64,6 +55,7 @@ export const App = () => {
     console.log('after delete', filterSelected)
     setSelected(filterSelected);
   }
+
   const clearCart = () => {
     setSelected([])
   }

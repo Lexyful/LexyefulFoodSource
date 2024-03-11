@@ -3,7 +3,6 @@ import { FoodItem } from '../../FoodItem/FoodItem';
 import './Results.css';
 
 export const Results = ({ searchedResults, addToCart }) => {
-  console.log('hi it me searched result', searchedResults)
   return (
     <div>
       {searchedResults.length > 0 ? (
