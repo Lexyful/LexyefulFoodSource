@@ -7,7 +7,7 @@ export const Cart = ({ selectedItems, deleteSelectedItem, clearCart, addOneItem,
     const calculateTotalQuantity = selectedItems.reduce((accumulator, currentItem) => {
         return accumulator + currentItem.quantity;
     }, 0);
-    
+
     const checkOut = () => {
         if (selectedItems.length === 0) {
             alert('There are no items in your cart. Search for what you want to purchase and items will be added.');
@@ -22,8 +22,8 @@ export const Cart = ({ selectedItems, deleteSelectedItem, clearCart, addOneItem,
             <h2>This is your Cart</h2>
             <div className="cart-items">
                 {selectedItems.map((item, index) => (
-                    <div>
-                        <FoodItem index={index} item={item} handleItem={deleteSelectedItem} buttonDistinction={'remove from cart'} />
+                    <div key={item.id}>
+                        <FoodItem  key={index} index={index} item={item} handleItem={deleteSelectedItem} buttonDistinction={'remove from cart'} />
                         <div className="quantity-controls">
                             <button className="more-or-less" onClick={() => addOneItem(item)}>+</button>
                             <p>{item.quantity}</p>
