@@ -54,15 +54,15 @@ This project demonstrates my ability to complete a take-home tech project follow
 <summary> <h3>Wireframes</h3> </summary>
 <br>
 
-![](/Users/alexysjordan/JobPrep/lexyefulfoodsource/assets/Screenshot 2024-03-10 at 4.31.30 PM.png)
+![Screenshot 2024-03-10 at 4 31 30 PM](https://github.com/Lexyful/take-home-challenge/assets/117550598/b2105b64-6671-41db-b582-d4679912cf6e)
 
-![](/Users/alexysjordan/JobPrep/lexyefulfoodsource/assets/Screenshot 2024-03-10 at 4.32.03 PM.png)
+![Screenshot 2024-03-10 at 4 32 03 PM](https://github.com/Lexyful/take-home-challenge/assets/117550598/a092e164-c2a9-4ce9-9b6a-3d4afa2c6416)
 
-![](/Users/alexysjordan/JobPrep/lexyefulfoodsource/assets/244512588-64cfc7a2-5c9b-42db-9897-6b2d94b84365.png) 
+![Screenshot 2024-03-09 at 8 10 25 AM](https://github.com/Lexyful/take-home-challenge/assets/117550598/bf6ea5b2-b0cf-4d2a-a140-d1bdbd3b8c62)
 
-![](/Users/alexysjordan/JobPrep/lexyefulfoodsource/assets/244512578-2b1f025b-4591-4e7c-b5a7-2d7c150906f7.png)
+![244512578-2b1f025b-4591-4e7c-b5a7-2d7c150906f7](https://github.com/Lexyful/take-home-challenge/assets/117550598/e406fa10-b03f-4989-8186-40ff46345a3d)
 
-![](/Users/alexysjordan/JobPrep/lexyefulfoodsource/assets/Screenshot 2024-03-09 at 8.10.25 AM.png)
+![244512588-64cfc7a2-5c9b-42db-9897-6b2d94b84365](https://github.com/Lexyful/take-home-challenge/assets/117550598/805dd532-96cc-4952-b8cc-fcf2ffc4bdcf)
 </details>
 
 <details>
