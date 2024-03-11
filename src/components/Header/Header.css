@@ -1,8 +1,8 @@
 .header-container {
     background-color: #85d5ef;
     display: flex;
-    justify-content: space-between; /* Align items with equal space between them */
-    align-items: center; /* Align items vertically */
+    justify-content: space-between;
+    align-items: center; 
     padding: 20px;
   }
   
