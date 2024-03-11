@@ -11,3 +11,12 @@ h1 {
   margin: 0;
 }
 
+button {
+  font-family: 'Leckerli One', sans-serif;
+  font-size: 1.5vh;
+  background-color: #219ebc;
+  transition-duration: 0.4s;
+  height: 4vh;
+  width: 8vh;
+}
+

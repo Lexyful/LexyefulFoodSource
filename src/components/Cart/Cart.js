@@ -3,7 +3,7 @@ import { FoodItem } from '../../FoodItem/FoodItem';
 import './Cart.css';
 import { NavLink } from 'react-router-dom';
 
-export const Cart = ({ selected, deleteSelected, clearCart, incrementItem, decrementItem }) => {
+export const Cart = ({ selected, deleteSelected, clearCart, addOneItem, removeOneItem }) => {
     const calculateTotalQuantity = selected.reduce((accumulator, currentItem) => {
         return accumulator + currentItem.quantity;
     }, 0);
@@ -25,9 +25,9 @@ export const Cart = ({ selected, deleteSelected, clearCart, incrementItem, decre
                     <div key={item.id}>
                         <FoodItem item={item} handleItem={deleteSelected} buttonDistinction={'remove from cart'} />
                         <div className="quantity-controls">
-                            <button onClick={() => incrementItem(item)}>+</button>
+                            <button className="more-or-less" onClick={() => addOneItem(item)}>+</button>
                             <p>{item.quantity}</p>
-                            <button onClick={() => decrementItem(item)}>-</button>
+                            <button className="more-or-less" onClick={() => removeOneItem(item)}>-</button>
                         </div>
                     </div>
                 ))}

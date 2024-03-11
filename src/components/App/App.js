@@ -60,20 +60,20 @@ export const App = () => {
     setSelected([])
   }
 
-  const decrementItem = (item) => {
+  const addOneItem = (item) => {
     const updatedSelected = selected.map(selectedItem => {
-      if (selectedItem.id === item.id && selectedItem.quantity > 0) {
-        return { ...selectedItem, quantity: selectedItem.quantity - 1 };
+      if (selectedItem.id === item.id) {
+        return { ...selectedItem, quantity: selectedItem.quantity + 1 };
       }
       return selectedItem;
     });
     setSelected(updatedSelected);
   };
 
-  const incrementItem = (item) => {
+  const removeOneItem = (item) => {
     const updatedSelected = selected.map(selectedItem => {
-      if (selectedItem.id === item.id) {
-        return { ...selectedItem, quantity: selectedItem.quantity + 1 };
+      if (selectedItem.id === item.id && selectedItem.quantity > 0) {
+        return { ...selectedItem, quantity: selectedItem.quantity - 1 };
       }
       return selectedItem;
     });
@@ -86,7 +86,7 @@ export const App = () => {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/results" element={<Results searchedResults={searchedResults} addToCart={addToCart} />} />
-        <Route exact path="/cart" element={<Cart selected={selected} deleteSelected={deleteSelected} decrementItem={decrementItem} incrementItem={incrementItem} clearCart={clearCart}/>} />
+        <Route exact path="/cart" element={<Cart selected={selected} deleteSelected={deleteSelected} addOneItem={addOneItem}  removeOneItem={removeOneItem} clearCart={clearCart}/>} />
         <Route path="*" element={<div>404 Not Found</div>} />
       </Routes>
     </div>
