@@ -1,4 +1,4 @@
-# 📰 Lexyeful Food Source
+# Lexyeful Food Source
 
 ## Table of Contents
   - [Introduction](#Introduction)
