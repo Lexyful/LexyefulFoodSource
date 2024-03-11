@@ -72,7 +72,8 @@ This project demonstrates my ability to complete a take-home tech project follow
 </details>
 
 ## Deployed Page
-The live application can be used [HERE](https://vercel.com/lexyful/lexyefulfoodsource/3qRhcyPZaP36CV3nfQr1xwKt9PJn)!
+The live application can be used [HERE](lexyefulfoodsource.vercel.app
+)!
 
 ## Wins
 - Achievement of Minimum Viable Product (MVP) and subsequent extensions
