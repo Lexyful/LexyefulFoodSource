@@ -32,8 +32,6 @@ This project demonstrates my ability to complete a take-home tech project follow
 ![CSS](https://img.shields.io/badge/CSS-3-blueviolet.svg)
 
 ## Contributors
-
-## Contributors
 ### Front End
 
 <table>
