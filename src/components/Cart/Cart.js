@@ -3,19 +3,7 @@ import { FoodItem } from '../../FoodItem/FoodItem';
 import './Cart.css';
 import { NavLink } from 'react-router-dom';
 
-export const Cart = ({ selectedItems, deleteSelectedItem, clearCart, addOneItem, removeOneItem }) => {
-    const calculateTotalQuantity = selectedItems.reduce((accumulator, currentItem) => {
-        return accumulator + currentItem.quantity;
-    }, 0);
-
-    const checkOut = () => {
-        if (selectedItems.length === 0) {
-            alert('There are no items in your cart. Search for what you want to purchase and items will be added.');
-        } else {
-            alert(`Thank you. You purchased ${calculateTotalQuantity} items!`);
-            clearCart();
-        }
-    }
+export const Cart = ({ selectedItems, deleteSelectedItem, clearCart, addOneItem, removeOneItem, calculateTotalQuantity, checkOut }) => {
 
     return (
         <div className="cart-container">
