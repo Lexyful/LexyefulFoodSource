@@ -77,13 +77,27 @@ export const App = () => {
     setSelectedItems(updatedSelected);
   };
 
+  const calculateTotalQuantity = selectedItems.reduce((accumulator, currentItem) => {
+    return accumulator + currentItem.quantity;
+}, 0);
+
+const checkOut = () => {
+    if (selectedItems.length === 0) {
+        alert('There are no items in your cart. Search for what you want to purchase and items will be added.');
+    } else {
+        alert(`Thank you. You purchased ${calculateTotalQuantity} items!`);
+        clearCart();
+    }
+}
+
+
   return (
     <div className="App">
-      <Header handleSearch={handleSearch} selectedItems={selectedItems}/>
+      <Header handleSearch={handleSearch} calculateTotalQuantity={calculateTotalQuantity}/>
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/results" element={<Results searchedResults={searchedResults} addToCart={addToCart} />} />
-        <Route exact path="/cart" element={<Cart selectedItems={selectedItems} deleteSelectedItem={deleteSelectedItem} addOneItem={addOneItem}  removeOneItem={removeOneItem} clearCart={clearCart}/>} />
+        <Route exact path="/cart" element={<Cart selectedItems={selectedItems} deleteSelectedItem={deleteSelectedItem} addOneItem={addOneItem}  removeOneItem={removeOneItem}  checkOut={checkOut} calculateTotalQuantity={calculateTotalQuantity} clearCart={clearCart}/>} />
         <Route path="*" element={<div>404 Not Found</div>} />
       </Routes>
     </div>
