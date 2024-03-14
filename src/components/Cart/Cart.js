@@ -4,7 +4,6 @@ import './Cart.css';
 import { NavLink } from 'react-router-dom';
 
 export const Cart = ({ selectedItems, deleteSelectedItem, clearCart, addOneItem, removeOneItem, calculateTotalQuantity, checkOut }) => {
-
     return (
         <div className="cart-container">
             <h2>This is your Cart</h2>
