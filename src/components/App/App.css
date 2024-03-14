@@ -12,11 +12,18 @@ h1 {
 }
 
 button {
+  cursor: pointer; 
   font-family: 'Leckerli One', sans-serif;
   font-size: 1.5vh;
   background-color: #219ebc;
   transition-duration: 0.4s;
   height: 4vh;
   width: 8vh;
+}
+
+.search-button:hover {
+  cursor: pointer; 
+  background-color: #023047;
+  color: white;
 }
 
